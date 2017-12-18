@@ -3,7 +3,7 @@ package githubCalendar;
 public class Calendar {
 	public static void main(String[] args) {
 		System.out.println("Calendar");
-		System.out.println("ÀÏ ¿ù È­ ¼ö ¸ñ ±İ Åä");
+		System.out.println("ì¼ ì›” í™” ìˆ˜ ëª© ê¸ˆ í† ");
 		System.out.println("--------------------");
 		System.out.println("1  2  3  4  5  6  7");
 		System.out.println("8  9  10 11 12 13 14");
