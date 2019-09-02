@@ -3,6 +3,7 @@ package generics.test; // move to package
 import java.util.Collections;
 import java.util.Comparator;
 
+// git config email Test
 class Fruit {
 	String name;
 	int weight;
