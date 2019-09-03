@@ -14,7 +14,9 @@ Memory를 다 소비할 정도로 만들어버린다. 따라서, Thread Pool을 
 1.  synchronized 를 추가해준다. (but, 동기화 오버헤드가 심해짐, 속도가 100배정도 느려진다.)
 2.  Enum Class로 정의해준다.
 3.  LazyHolder (synchronized 도 필요없고, 자바 버전도 상관없다)  
-  객체가 필요할 때로 초기화를 미루는 것이다.
+  객체가 필요할 때로 초기화를 미루는 것이다.  
+  JVM의 Class 초기화 과정에서 보장되는 원자적 특성을 이용하여, singleton의 초기화에 대한 책임을 JVM 에게 떠넘긴다.  
+  holder안에 선언된 Instance가 static이기 때문에 Class 로딩시점에 한 번만 호출되고, final을 사용해 다시 값이 할당되지 않는다.
 ```
 public class Singleton {
 
