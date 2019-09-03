@@ -11,7 +11,7 @@ Memory를 다 소비할 정도로 만들어버린다. 따라서, Thread Pool을 
 
 하나의 인스턴스만 존재해야 할 경우 singleton pattern을 사용한다. 그러나, `Multi Thread` 환경에서 Singleton 객체에 접근 시 초기화 관련하여 문제가 있다.  
 - Singleton 객체를 생성하는 로직을 Thread-Safe 하게 적용하는 방법  
-1.  synchronized 를 추가해준다. (but, 동기화 오버헤드가 심해짐)
+1.  synchronized 를 추가해준다. (but, 동기화 오버헤드가 심해짐, 속도가 100배정도 느려진다.)
 2.  Enum Class로 정의해준다.
 3.  LazyHolder (synchronized 도 필요없고, 자바 버전도 상관없다)  
   객체가 필요할 때로 초기화를 미루는 것이다.
@@ -54,4 +54,9 @@ ThreadA : 2019.06.09
 ..
 ```
 
-## Thread Safe 하게 처리해주기
+## Thread Safety 하게 처리해주기
+1. synchronized  
+여러 개의 Thread가 한 개의 자원을 사용하고자 할 때,  
+현재 Data를 사용하고 있는 해당 Thread를 제외하고 나머지  
+Thread들은 Data에 접근 할 수 없도록 한다.  
+- ThreadSafe.java 의 주석처리 된 synchronized 코드를 확인해보자.
