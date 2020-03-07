@@ -2,13 +2,12 @@ package loop.test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamC {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>(Arrays.asList("Apple","Banana","Cat","Dog"));
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("Apple", "Banana", "Cat", "Dog"));
         // map
         System.out.println(list.stream()
                 .map(s -> s.toUpperCase())
@@ -27,9 +26,16 @@ public class StreamC {
                 .filter(t -> t.length() > 5)
                 .collect(Collectors.toList())); // [Banana]
 
+        Stream<String> stream =
+                list.stream()
+                .filter(f -> f.contains("p"));
+        System.out.println("f -> f.contains(p) :" + stream.collect(Collectors.toList()));
+
         // sorted
         System.out.println(list.stream()
                 .sorted()
                 .collect(Collectors.toList())); // [Apple, Banana, Cat, Dog]
+
+
     }
 }
