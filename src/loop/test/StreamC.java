@@ -2,6 +2,7 @@ package loop.test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,10 +41,12 @@ public class StreamC {
                 .collect(toList())); // [Apple, Banana, Cat, Dog]
 
         List<Integer> listNums = Arrays.asList(1,2,3,3,4,5);
-        System.out.println("toSet() : " +
+        System.out.println("joining() : " + "\n" +
             listNums.stream()
                     .filter(i -> i > 2)
-                    .collect(toSet())
+                    .map(i -> "String: " + i+"\n")
+                    .distinct()
+                    .collect(joining(",","",""))
         );
     }
 }
