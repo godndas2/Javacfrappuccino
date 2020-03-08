@@ -2,8 +2,11 @@ package loop.test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.*;
 
 public class StreamC {
     public static void main(String[] args) {
@@ -11,31 +14,36 @@ public class StreamC {
         // map
         System.out.println(list.stream()
                 .map(s -> s.toUpperCase())
-                .collect(Collectors.joining(" "))); // APPLE BANANA CAT DOG
+                .collect(joining(" "))); // APPLE BANANA CAT DOG
 
         System.out.println(list.stream()
                 .map(String::toUpperCase)
-                .collect(Collectors.toList())); // [APPLE, BANANA, CAT, DOG]
+                .collect(toList())); // [APPLE, BANANA, CAT, DOG]
 
         // filter
         System.out.println(list.stream()
                 .filter(t -> t.length() > 5)
-                .collect(Collectors.joining(" "))); // BANANA
+                .collect(joining(" "))); // BANANA
 
         System.out.println(list.stream()
                 .filter(t -> t.length() > 5)
-                .collect(Collectors.toList())); // [Banana]
+                .collect(toList())); // [Banana]
 
         Stream<String> stream =
                 list.stream()
                 .filter(f -> f.contains("p"));
-        System.out.println("f -> f.contains(p) :" + stream.collect(Collectors.toList()));
+        System.out.println("f -> f.contains(p) :" + stream.collect(toList()));
 
         // sorted
         System.out.println(list.stream()
                 .sorted()
-                .collect(Collectors.toList())); // [Apple, Banana, Cat, Dog]
+                .collect(toList())); // [Apple, Banana, Cat, Dog]
 
-
+        List<Integer> listNums = Arrays.asList(1,2,3,3,4,5);
+        System.out.println("toSet() : " +
+            listNums.stream()
+                    .filter(i -> i > 2)
+                    .collect(toSet())
+        );
     }
 }
