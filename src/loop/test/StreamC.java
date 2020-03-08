@@ -48,5 +48,12 @@ public class StreamC {
                     .distinct()
                     .collect(joining(",","",""))
         );
+
+        System.out.println("count() : " +
+            listNums.stream()
+                    .filter(nums -> nums > 2)
+                    .distinct() // 중복 제거
+                    .count() // count() : 중복 숫자까지 count
+        );
     }
 }
