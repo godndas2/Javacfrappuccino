@@ -5,35 +5,35 @@ import java.util.Stack;
 
 public class StackEx02 {
 
-	public static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Usage : Java StackEx02 \"EXPRESSION\"");
-			System.out.println("Example : Java StackEx02 \"(2+3)*1\"");
-			System.exit(0);
-		}
-		
-		Stack st = new Stack();
-		String exp = args[0];
-		
-		System.out.println("EXPRESSION : " + exp);
-		
-		try {
-			for (int i = 0; i < exp.length(); i++) {
-				char c = exp.charAt(i);
-				if (c == '(') {
-					st.push(c+"");
-				} else if(c == ')'){
-					st.pop();
-				}
-			}
-			if (st.isEmpty()) {
-				System.out.println("°ýÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.");
-			} else {
-				System.out.println("°ýÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù");
-			}
-		} catch (EmptyStackException e) {
-			System.out.println("°ýÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
-		}
-	}
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Usage : Java StackEx02 \"EXPRESSION\"");
+            System.out.println("Example : Java StackEx02 \"(2+3)*1\"");
+            System.exit(0);
+        }
+
+        Stack st = new Stack();
+        String exp = args[0];
+
+        System.out.println("EXPRESSION : " + exp);
+
+        try {
+            for (int i = 0; i < exp.length(); i++) {
+                char c = exp.charAt(i);
+                if (c == '(') {
+                    st.push(c + "");
+                } else if (c == ')') {
+                    st.pop();
+                }
+            }
+            if (st.isEmpty()) {
+                System.out.println("ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Õ´Ï´ï¿½.");
+            } else {
+                System.out.println("ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½");
+            }
+        } catch (EmptyStackException e) {
+            System.out.println("ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+        }
+    }
 
 }

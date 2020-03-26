@@ -7,59 +7,59 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 public class HashMapTest02 {
-	
-	static HashMap phoneBook = new HashMap();
-	
-	public static void main(String[] args) {
-		addPhoneNo("Ä£±¸", "È«±æµ¿", "010-1111-1111");
-		addPhoneNo("Ä£±¸", "È«±æµ¿2", "010-1234-1111");
-		addPhoneNo("Ä£±¸", "È«±æµ¿3", "010-4567-1111");
-		addPhoneNo("È¸»ç", "È«±æµ¿4", "010-8910-1111");
-		addPhoneNo("°­¾ÆÁö", "È«±æµ¿5", "010-1313-1111");
-		addPhoneNo("Ä£±¸", "È«±æµ¿6", "010-8585-1111");
-		addPhoneNo("´©±¸¼¼¿ä", "010-4548-4519");
-		printList();
-	}
-	
-	// ±×·ì¿¡ ÀüÈ­¹øÈ£¸¦ Ãß°¡
-	static void addPhoneNo(String grpName, String name, String tel) {
-		addGrp(grpName);
-		HashMap grp = (HashMap) phoneBook.get(grpName);
-		grp.put(tel, name);
-	}
-	
-	// ±×·ì Ãß°¡
-	static void addGrp(String grpName) {
-		if (!phoneBook.containsKey(grpName)) {
-			phoneBook.put(grpName, new HashMap());
-		}
-	}
-	
-	static void addPhoneNo(String name, String tel) {
-		addPhoneNo("±âÅ¸", name, tel);
-	}
-	
-	// ÀüÈ­¹øÈ£ºÎ ÀüÃ¼ Ãâ·Â
-	static void printList() {
-		Set set = phoneBook.entrySet();
-		Iterator it = set.iterator();
-		
-		while (it.hasNext()) {
-			Map.Entry e = (Map.Entry) it.next();
-			
-			Set subSet = ((HashMap) e.getValue()).entrySet();
-			Iterator subIt = subSet.iterator();
-			
-			System.out.println(" * " + e.getKey() + "["+subSet.size()+"]");
-			
-			while (subIt.hasNext()) {
-				Map.Entry subE = (Map.Entry)subIt.next();
-				String telNo = (String) subE.getKey();
-				String name = (String) subE.getValue();
-				System.out.println(name + " " + telNo);
-			}
-			System.out.println();
-		}
-	}
+
+    static HashMap phoneBook = new HashMap();
+
+    public static void main(String[] args) {
+        addPhoneNo("Ä£ï¿½ï¿½", "È«ï¿½æµ¿", "010-1111-1111");
+        addPhoneNo("Ä£ï¿½ï¿½", "È«ï¿½æµ¿2", "010-1234-1111");
+        addPhoneNo("Ä£ï¿½ï¿½", "È«ï¿½æµ¿3", "010-4567-1111");
+        addPhoneNo("È¸ï¿½ï¿½", "È«ï¿½æµ¿4", "010-8910-1111");
+        addPhoneNo("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "È«ï¿½æµ¿5", "010-1313-1111");
+        addPhoneNo("Ä£ï¿½ï¿½", "È«ï¿½æµ¿6", "010-8585-1111");
+        addPhoneNo("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "010-4548-4519");
+        printList();
+    }
+
+    // ï¿½×·ì¿¡ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½ß°ï¿½
+    static void addPhoneNo(String grpName, String name, String tel) {
+        addGrp(grpName);
+        HashMap grp = (HashMap) phoneBook.get(grpName);
+        grp.put(tel, name);
+    }
+
+    // ï¿½×·ï¿½ ï¿½ß°ï¿½
+    static void addGrp(String grpName) {
+        if (!phoneBook.containsKey(grpName)) {
+            phoneBook.put(grpName, new HashMap());
+        }
+    }
+
+    static void addPhoneNo(String name, String tel) {
+        addPhoneNo("ï¿½ï¿½Å¸", name, tel);
+    }
+
+    // ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½
+    static void printList() {
+        Set set = phoneBook.entrySet();
+        Iterator it = set.iterator();
+
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry) it.next();
+
+            Set subSet = ((HashMap) e.getValue()).entrySet();
+            Iterator subIt = subSet.iterator();
+
+            System.out.println(" * " + e.getKey() + "[" + subSet.size() + "]");
+
+            while (subIt.hasNext()) {
+                Map.Entry subE = (Map.Entry) subIt.next();
+                String telNo = (String) subE.getKey();
+                String name = (String) subE.getValue();
+                System.out.println(name + " " + telNo);
+            }
+            System.out.println();
+        }
+    }
 
 }

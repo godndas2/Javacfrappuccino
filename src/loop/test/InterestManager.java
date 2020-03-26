@@ -1,41 +1,41 @@
 package loop.test;
 
 public class InterestManager {
-	
-	public double getInterestRate(int day) { // ÀÌÀÚ¸¦ Á¤ÇØÁÖ´Â ¸Ş¼Òµå
-		double rate ; // ÀÌÀÚÀ²
-		if (day <= 90) {
-			rate = 0.5;
-		} else if(day > 90 && day<= 180) {
-			rate = 1;
-		} else if(day > 180 && day < 365) {
-			rate = 2;
-		} else {
-			rate = 5.6;
-		}
-		return rate;
-	}
-	
-	public double calculateAmount(int day, long mount) { // day : ¿¹±İ °ÅÄ¡ ±â°£, mount : ¿¹Ä¡ ±İ¾×
-		double totalAmount;
-		double rate = getInterestRate(day);
-		double rateAmount = mount * rate / 100.0; // ¿¹Ä¡±İ¾× * getInterestRate(day)ÀÇ return rate
-		totalAmount  = mount + rateAmount; // ¿¹Ä¡±İ + ÀÌÀÚ
-		return totalAmount;
-	}
-	
-	public static void main(String[] args) {
-		InterestManager im = new InterestManager();
-		
+
+    public double getInterestRate(int day) { // ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ş¼Òµï¿½
+        double rate; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (day <= 90) {
+            rate = 0.5;
+        } else if (day > 90 && day <= 180) {
+            rate = 1;
+        } else if (day > 180 && day < 365) {
+            rate = 2;
+        } else {
+            rate = 5.6;
+        }
+        return rate;
+    }
+
+    public double calculateAmount(int day, long mount) { // day : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½â°£, mount : ï¿½ï¿½Ä¡ ï¿½İ¾ï¿½
+        double totalAmount;
+        double rate = getInterestRate(day);
+        double rateAmount = mount * rate / 100.0; // ï¿½ï¿½Ä¡ï¿½İ¾ï¿½ * getInterestRate(day)ï¿½ï¿½ return rate
+        totalAmount = mount + rateAmount; // ï¿½ï¿½Ä¡ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½
+        return totalAmount;
+    }
+
+    public static void main(String[] args) {
+        InterestManager im = new InterestManager();
+
 //		for (int day = 1; day <= 365; day++) {
 //			double money = im.calculateAmount(day, 1000000);
 //			System.out.println(day + ":" + money);
 //		}
-		
-		for (int day = 10; day <= 370; day+=10) { // day += 10 : day = day+10
-			double money = im.calculateAmount(day, 1000000);
-			System.out.println(day + ":" + money);
-		}
-	}
+
+        for (int day = 10; day <= 370; day += 10) { // day += 10 : day = day+10
+            double money = im.calculateAmount(day, 1000000);
+            System.out.println(day + ":" + money);
+        }
+    }
 
 }

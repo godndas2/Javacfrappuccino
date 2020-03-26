@@ -19,7 +19,7 @@ public class ThreadPool implements Runnable {
         }
     }
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         ThreadPool runnableA = new ThreadPool("ThreadA");
         ThreadPool runnableB = new ThreadPool("ThreadB");
         ThreadPool runnableC = new ThreadPool("ThreadC");
@@ -40,7 +40,7 @@ public class ThreadPool implements Runnable {
             if (!executorService.awaitTermination(5, TimeUnit.MINUTES)) {
                 executorService.shutdownNow();
             }
-        }catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
             executorService.shutdownNow();
         }

@@ -5,33 +5,33 @@ import java.util.Date;
 
 public class SimpleDateTest {
 
-	public static void main(String[] args) {
-		Date today = new Date();
-		
-		SimpleDateFormat a1,a2,a3,a4;
-		SimpleDateFormat a5,a6,a7,a8,a9;
-		
-		a1 = new SimpleDateFormat("yyyy-MM-dd");
-		a2 = new SimpleDateFormat("yyyy³â MMM ddÀÏ E¿äÀÏ");
-		a3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS a");
-		a4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+    public static void main(String[] args) {
+        Date today = new Date();
 
-		a5 = new SimpleDateFormat("¿À´ÃÀº ¿Ã ÇØÀÇ D¹ø Â° ³¯ÀÔ´Ï´Ù.");
-		a6 = new SimpleDateFormat("¿À´ÃÀº ÀÌ ´ÞÀÇ d¹ø Â° ³¯ÀÔ´Ï´Ù.");
-		a7 = new SimpleDateFormat("¿À´ÃÀº ¿Ã ÇØÀÇ w¹ø Â° ÁÖÀÔ´Ï´Ù.");
-		a8 = new SimpleDateFormat("¿À´ÃÀº ÀÌ ´ÞÀÇ W¹ø Â° ÁÖÀÔ´Ï´Ù.");
-		a9 = new SimpleDateFormat("¿À´ÃÀº ÀÌ ´ÞÀÇ F¹ø Â° E¿äÀÏÀÔ´Ï´Ù.");
-		
-		System.out.println(a1.format(today));
-		System.out.println(a2.format(today));
-		System.out.println(a3.format(today));
-		System.out.println(a4.format(today));
-		System.out.println(a5.format(today));
-		System.out.println(a6.format(today));
-		System.out.println(a7.format(today));
-		System.out.println(a8.format(today));
-		System.out.println(a9.format(today));
-		
-	}
+        SimpleDateFormat a1, a2, a3, a4;
+        SimpleDateFormat a5, a6, a7, a8, a9;
+
+        a1 = new SimpleDateFormat("yyyy-MM-dd");
+        a2 = new SimpleDateFormat("yyyyï¿½ï¿½ MMM ddï¿½ï¿½ Eï¿½ï¿½ï¿½ï¿½");
+        a3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS a");
+        a4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+
+        a5 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Dï¿½ï¿½ Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        a6 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ dï¿½ï¿½ Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        a7 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ wï¿½ï¿½ Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        a8 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Wï¿½ï¿½ Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        a9 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Fï¿½ï¿½ Â° Eï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+
+        System.out.println(a1.format(today));
+        System.out.println(a2.format(today));
+        System.out.println(a3.format(today));
+        System.out.println(a4.format(today));
+        System.out.println(a5.format(today));
+        System.out.println(a6.format(today));
+        System.out.println(a7.format(today));
+        System.out.println(a8.format(today));
+        System.out.println(a9.format(today));
+
+    }
 
 }

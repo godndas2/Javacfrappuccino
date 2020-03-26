@@ -8,33 +8,33 @@ import java.util.Map;
 
 public class IteratorTest {
 
-	public static void main(String[] args) {
-		ArrayList list = new ArrayList();
-		list.add("1");
-		list.add("2");
-		list.add("3");
-		list.add("4");
-		list.add("5");
-		
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+
 //		Iterator it = list.iterator();
 //		
 //		while (it.hasNext()) {
 //			Object obj = it.next();
 //			System.out.println(obj);
 //		}
-		
-		ListIterator it = list.listIterator();
-		
-		while (it.hasNext()) {
-			System.out.println(it.next()); // ¼ø¹æÇâ
-		}
-		System.out.println();
-		
-		while (it.hasPrevious()) {
-			System.out.println(it.previous()); // ¿ª¹æÇâ
-		}
-		System.out.println();
-		
-	}
+
+        ListIterator it = list.listIterator();
+
+        while (it.hasNext()) {
+            System.out.println(it.next()); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        }
+        System.out.println();
+
+        while (it.hasPrevious()) {
+            System.out.println(it.previous()); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        }
+        System.out.println();
+
+    }
 
 }

@@ -6,24 +6,24 @@ import java.util.Vector;
 
 public class IteratorVector {
 
-	public static void main(String[] args) {
-		Vector v = new Vector();
-		v.add("0");
-		v.add("1");
-		v.add("2");
-		v.add("3");
-		v.add("4");
-		
-		System.out.println("»èÁ¦ Àü:" + v);
-		
-		Iterator it = v.iterator();
-		it.next();
-		it.remove();
-		it.next();
-		it.remove();
-		
-		System.out.println("»èÁ¦ ÈÄ:" + v);
-		
-	}
+    public static void main(String[] args) {
+        Vector v = new Vector();
+        v.add("0");
+        v.add("1");
+        v.add("2");
+        v.add("3");
+        v.add("4");
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½:" + v);
+
+        Iterator it = v.iterator();
+        it.next();
+        it.remove();
+        it.next();
+        it.remove();
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½:" + v);
+
+    }
 
 }

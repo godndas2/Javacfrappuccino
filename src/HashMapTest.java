@@ -5,36 +5,36 @@ import java.util.Scanner;
 
 public class HashMapTest {
 
-	public static void main(String[] args) {
-		HashMap map = new HashMap();
-		map.put("myId", "1234");
-		map.put("asdf", "1111"); // 3¹øÂ° asdf°¡  Á¸ÀçÇÏ±â ¶§¹®¿¡ »õ·Î Ãß°¡µÇ´Â ´ë½Å ±âÁ¸ÀÇ °ªÀ» µ¤¾î¾´´Ù.
-		map.put("asdf", "1234");
-		
-		Scanner sc = new Scanner(System.in);
-		
-		while (true) {
-			System.out.println("id, Password¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
-			System.out.println("ID :");
-			String id = sc.nextLine().trim();
-			
-			System.out.println("Password :");
-			String pwd = sc.nextLine().trim();
-			System.out.println();
-			
-			if (!map.containsKey(id)) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ID´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
-				continue;
-			} else {
-				if (!(map.get(id)).equals(pwd)) {
-					System.out.println("ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
-					break;
-				} else {
-					System.out.println("Id¿Í ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.");
-					break;
-				}
-			}
-		}
-	}
+    public static void main(String[] args) {
+        HashMap map = new HashMap();
+        map.put("myId", "1234");
+        map.put("asdf", "1111"); // 3ï¿½ï¿½Â° asdfï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¾´ï¿½ï¿½.
+        map.put("asdf", "1234");
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("id, Passwordï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
+            System.out.println("ID :");
+            String id = sc.nextLine().trim();
+
+            System.out.println("Password :");
+            String pwd = sc.nextLine().trim();
+            System.out.println();
+
+            if (!map.containsKey(id)) {
+                System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ IDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+                continue;
+            } else {
+                if (!(map.get(id)).equals(pwd)) {
+                    System.out.println("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+                    break;
+                } else {
+                    System.out.println("Idï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Õ´Ï´ï¿½.");
+                    break;
+                }
+            }
+        }
+    }
 
 }

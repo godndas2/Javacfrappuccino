@@ -6,12 +6,13 @@ import github.Robot.InterFace.Iknife;
 
 public class SuperR extends Robot {
 
-	public SuperR() {
+    public SuperR() {
 
-	}
-	public void shape() {
-		System.out.println("Super Robot : 팔, 다리, 몸통이 있습니다");
+    }
 
-	}
+    public void shape() {
+        System.out.println("Super Robot : 팔, 다리, 몸통이 있습니다");
+
+    }
 
 }

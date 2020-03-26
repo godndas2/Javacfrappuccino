@@ -5,35 +5,35 @@ import java.util.Iterator;
 
 public class IteratorTest02 {
 
-	public static void main(String[] args) {
-		ArrayList org = new ArrayList(10);
-		ArrayList copy = new ArrayList(10);
-		ArrayList copy2 = new ArrayList(10);
-		
-		for (int i = 0; i < 10; i++) {
-			org.add(i+"");
-			Iterator it = org.iterator();
-			
-			while (it.hasNext()) {
-				copy.add(it.next());
-				
-				System.out.println("= Org¿¡¼­ copy·Î º¹»ç ");
-				System.out.println("= org:" + org);
-				System.out.println("= copy:" + copy);
-				System.out.println();
-				
-				it = org.iterator(); // IteratorÀº Àç»ç¿ëÀÌ ºÒ°¡´ÉÇÏ¹Ç·Î ´Ù½Ã ¾ò¾î¿Â´Ù.
-				
-				while (it.hasNext()) {
-					copy2.add(it.next());
-					it.remove();
-				}
-				System.out.println("= Org¿¡¼­ copy2·Î ÀÌµ¿ ");
-				System.out.println("org:" + org);
-				System.out.println("copy2:" + copy2);
-				System.out.println();
-			}
-		}
-	}
+    public static void main(String[] args) {
+        ArrayList org = new ArrayList(10);
+        ArrayList copy = new ArrayList(10);
+        ArrayList copy2 = new ArrayList(10);
+
+        for (int i = 0; i < 10; i++) {
+            org.add(i + "");
+            Iterator it = org.iterator();
+
+            while (it.hasNext()) {
+                copy.add(it.next());
+
+                System.out.println("= Orgï¿½ï¿½ï¿½ï¿½ copyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ");
+                System.out.println("= org:" + org);
+                System.out.println("= copy:" + copy);
+                System.out.println();
+
+                it = org.iterator(); // Iteratorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ï¿½Ï¹Ç·ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
+
+                while (it.hasNext()) {
+                    copy2.add(it.next());
+                    it.remove();
+                }
+                System.out.println("= Orgï¿½ï¿½ï¿½ï¿½ copy2ï¿½ï¿½ ï¿½Ìµï¿½ ");
+                System.out.println("org:" + org);
+                System.out.println("copy2:" + copy2);
+                System.out.println();
+            }
+        }
+    }
 
 }

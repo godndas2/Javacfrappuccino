@@ -5,27 +5,27 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
-* @author halfdev
-* @since 2020-01-20
-* 생성하기 : 스트림 인스턴스 생성.
-* 가공하기 : 필터링(filtering) 및 맵핑(mapping) 등 원하는 결과를 만들어가는 중간 작업(intermediate operations).
-* 결과 만들기 : 최종적으로 결과를 만들어내는 작업(terminal operations).
-*/
+ * @author halfdev
+ * @since 2020-01-20
+ * 생성하기 : 스트림 인스턴스 생성.
+ * 가공하기 : 필터링(filtering) 및 맵핑(mapping) 등 원하는 결과를 만들어가는 중간 작업(intermediate operations).
+ * 결과 만들기 : 최종적으로 결과를 만들어내는 작업(terminal operations).
+ */
 public class StreamA {
 
     // Arrays.stream
-    String[] arr = new String[]{"a","b","c"};
+    String[] arr = new String[]{"a", "b", "c"};
     Stream<String> stream = Arrays.stream(arr);
     Stream<String> streamOfArrayPart =
-            Arrays.stream(arr,1,3); // b,c
+            Arrays.stream(arr, 1, 3); // b,c
 
     // Collection Type Stream
-    List<String> list = Arrays.asList("a","b","C");
+    List<String> list = Arrays.asList("a", "b", "C");
     Stream<String> streamList = list.stream();
     Stream<String> paralleStream = list.parallelStream(); // 병렬처리스트림
 
     // Filtering
-    List<String> names = Arrays.asList("Aaa","Bbb","Ccc");
+    List<String> names = Arrays.asList("Aaa", "Bbb", "Ccc");
     Stream<String> streamFilter = names.stream()
             .filter(name -> name.contains("A")); // AAA -> 'A' 만 리턴
 

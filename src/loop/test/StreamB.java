@@ -11,17 +11,17 @@ public class StreamB {
         long cnt = 0;
         for (String name : names) {
             if (name.contains("o")) {
-                cnt ++;
+                cnt++;
             }
         }
         System.out.println("Cnt : " + cnt); // 1
 
         // Make Stream
         names.stream(); // Collection of stream
-        Double[] dArrays = {3.1,2.2,3.3};
+        Double[] dArrays = {3.1, 2.2, 3.3};
         Arrays.stream(dArrays); // Array of Stream
 
-        Stream<Integer> str = Stream.of(1,2); // Stream 직접 생성
+        Stream<Integer> str = Stream.of(1, 2); // Stream 직접 생성
 
         // V2, Filter
         Stream<String> sreamFilter = names.stream()

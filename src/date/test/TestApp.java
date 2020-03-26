@@ -4,27 +4,27 @@ import java.util.Calendar;
 
 public class TestApp {
 
-	public static void main(String[] args) {
-		// ¿äÀÏÀº 1ºÎÅÍ ½ÃÀÛÇÏ±â ¶§¹®¿¡, DAY_OF_WEEK[0]Àº ºñ¿öµÐ´Ù.
-		final String[] DAY_OF_WEEK = {"","ÀÏ","È­","¼ö","¸ñ","±Ý","Åä"};
-		
-		Calendar date1 = Calendar.getInstance();
-		Calendar date2 = Calendar.getInstance();
-		
-		//monthÀÇ °æ¿ì 0 ºÎÅÍ ½ÃÀÛÇÏ±â ¶§¹®¿¡ 8¿ùÀÎ °æ¿ì, 7·Î ÁöÁ¤ÇØ¾ßÇÑ´Ù.
-		//date1.set(2019, Calendar.April, 16);
-		date1.set(2019, 04, 16);
-		System.out.println("date1Àº  " + toString(date1) + DAY_OF_WEEK[date1.get(Calendar.DAY_OF_WEEK)]+"¿äÀÏÀÌ°í,");
-		System.out.println("¿À´Ã(date2)Àº " + toString(date2) + DAY_OF_WEEK[date2.get(Calendar.DAY_OF_WEEK)]+"¿äÀÏÀÔ´Ï´Ù.");
-		
-		// µÎ ³¯Â¥°£ÀÇ Â÷ÀÌ ±¸ÇÏ±â * getTimeMillis() : 1000ºÐÀÇ 1ÃÊ ´ÜÀ§·Î º¯È¯
-		long diff = (date2.getTimeInMillis() - date1.getTimeInMillis()) / 1000;
-		System.out.println("±× ³¯(date1)ºÎÅÍ Áö±Ý(date2)±îÁö " + diff + "ÃÊ°¡ Áö³µ½À´Ï´Ù.");
-		System.out.println("ÀÏ(day)·Î °è»êÇÏ¸é " + diff / (24*60*60) +"ÀÏÀÔ´Ï´Ù.");
-	}
-	
-	public static String toString(Calendar date) {
-		return date.get(Calendar.YEAR)+"³â "+ (date.get(Calendar.MONTH)+1)+"¿ù " + date.get(Calendar.DATE) + "ÀÏ ";
-	}
+    public static void main(String[] args) {
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, DAY_OF_WEEK[0]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ð´ï¿½.
+        final String[] DAY_OF_WEEK = {"", "ï¿½ï¿½", "È­", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½"};
+
+        Calendar date1 = Calendar.getInstance();
+        Calendar date2 = Calendar.getInstance();
+
+        //monthï¿½ï¿½ ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 8ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, 7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
+        //date1.set(2019, Calendar.April, 16);
+        date1.set(2019, 04, 16);
+        System.out.println("date1ï¿½ï¿½  " + toString(date1) + DAY_OF_WEEK[date1.get(Calendar.DAY_OF_WEEK)] + "ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½,");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½(date2)ï¿½ï¿½ " + toString(date2) + DAY_OF_WEEK[date2.get(Calendar.DAY_OF_WEEK)] + "ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+
+        // ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ * getTimeMillis() : 1000ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+        long diff = (date2.getTimeInMillis() - date1.getTimeInMillis()) / 1000;
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½(date1)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(date2)ï¿½ï¿½ï¿½ï¿½ " + diff + "ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        System.out.println("ï¿½ï¿½(day)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ " + diff / (24 * 60 * 60) + "ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+    }
+
+    public static String toString(Calendar date) {
+        return date.get(Calendar.YEAR) + "ï¿½ï¿½ " + (date.get(Calendar.MONTH) + 1) + "ï¿½ï¿½ " + date.get(Calendar.DATE) + "ï¿½ï¿½ ";
+    }
 
 }

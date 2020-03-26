@@ -26,27 +26,27 @@ public class ThreadSafe {
 //                        rslt = dateFormat.format(dateA);
 //                    }
                     System.out.println("ThreadA : " + rslt);
-                }catch (Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                     break;
                 }
             }
         });
 
-        Thread threadB = new Thread(() ->{
-            for(int i=0;i<100;i++){
-                try{
+        Thread threadB = new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                try {
                     String rslt = dateFormat.format(dateB);
 
                     // Thread Safety하게 처리해주는 방법 ( synchronized )
                     /*
-                    *  String rslt;
-                    *  synchronized (dateFormat) {
-                    *       rslt = dateFormat.format(dateB)
-                    * }
-                    * */
+                     *  String rslt;
+                     *  synchronized (dateFormat) {
+                     *       rslt = dateFormat.format(dateB)
+                     * }
+                     * */
                     System.out.println("threadB : " + rslt);
-                }catch(Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                     break;
                 }

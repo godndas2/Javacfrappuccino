@@ -4,28 +4,28 @@ import java.util.Calendar;
 
 public class CalendarEx02 {
 
-	public static void main(String[] args) {
-		// ¸ðµÎ ´Ù ¿À´Ã ³¯Â¥ ±âÁØÀ¸·Î ÇÒ ¼ö´Â ¾øÀ»±î?
-		
-		Calendar date = Calendar.getInstance();
-		date.set(2019, 4, 28); // 2019³â 5¿ù 27ÀÏ
-		
-		System.out.println(toString(date));
-		System.out.println("= 1ÀÏ ÈÄ =");
-		date.add(Calendar.DATE, 1);
-		System.out.println(toString(date));
-		
-		System.out.println("= 6´Þ Àü =");
-		date.add(Calendar.MONTH, -6);
-		System.out.println(toString(date));
+    public static void main(String[] args) {
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 
-		System.out.println("= 31ÀÏ ÈÄ ="); 
-		date.add(Calendar.MONTH, 1);
-		System.out.println(toString(date));
-	}
-	
-	public static String toString(Calendar date) {
-		return date.get(Calendar.YEAR) +"³â " + (date.get(Calendar.MONTH) + 1) +"¿ù " + date.get(Calendar.DATE) + "ÀÏ";
-	}
+        Calendar date = Calendar.getInstance();
+        date.set(2019, 4, 28); // 2019ï¿½ï¿½ 5ï¿½ï¿½ 27ï¿½ï¿½
+
+        System.out.println(toString(date));
+        System.out.println("= 1ï¿½ï¿½ ï¿½ï¿½ =");
+        date.add(Calendar.DATE, 1);
+        System.out.println(toString(date));
+
+        System.out.println("= 6ï¿½ï¿½ ï¿½ï¿½ =");
+        date.add(Calendar.MONTH, -6);
+        System.out.println(toString(date));
+
+        System.out.println("= 31ï¿½ï¿½ ï¿½ï¿½ =");
+        date.add(Calendar.MONTH, 1);
+        System.out.println(toString(date));
+    }
+
+    public static String toString(Calendar date) {
+        return date.get(Calendar.YEAR) + "ï¿½ï¿½ " + (date.get(Calendar.MONTH) + 1) + "ï¿½ï¿½ " + date.get(Calendar.DATE) + "ï¿½ï¿½";
+    }
 
 }

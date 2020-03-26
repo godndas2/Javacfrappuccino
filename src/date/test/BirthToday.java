@@ -4,16 +4,16 @@ import java.util.Calendar;
 
 public class BirthToday {
 
-	public static void main(String[] args) {
-		Calendar born1 = Calendar.getInstance(); // »ýÀÏ
-		Calendar born2 = Calendar.getInstance(); // ¿À´Ã ³¯Â¥
-		
-		long days = 0; // »ì¾Æ¿Â ³¯Â¥
-		
-		born1.set(1993, 11, 23);
-		
-		days = (born2.getTimeInMillis() - born1.getTimeInMillis()) / (24*60*60*1000);
-		System.out.println("»ì¾Æ¿Â ³¯ : " + days +"ÀÏ");
-	}
+    public static void main(String[] args) {
+        Calendar born1 = Calendar.getInstance(); // ï¿½ï¿½ï¿½ï¿½
+        Calendar born2 = Calendar.getInstance(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥
+
+        long days = 0; // ï¿½ï¿½Æ¿ï¿½ ï¿½ï¿½Â¥
+
+        born1.set(1993, 11, 23);
+
+        days = (born2.getTimeInMillis() - born1.getTimeInMillis()) / (24 * 60 * 60 * 1000);
+        System.out.println("ï¿½ï¿½Æ¿ï¿½ ï¿½ï¿½ : " + days + "ï¿½ï¿½");
+    }
 
 }

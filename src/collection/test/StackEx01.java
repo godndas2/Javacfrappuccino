@@ -4,55 +4,55 @@ import java.util.Stack;
 
 public class StackEx01 {
 
-	public static Stack back = new Stack();
-	public static Stack forward = new Stack();
-	
-	public static void main(String[] args) {
-		goURL("1.Naver");
-		goURL("2.Daum");
-		goURL("3.Nate");
-		goURL("4.Google");
-		
-		printStatus();
-		
-		goBack();
-		System.out.println("= µÚ·Î°¡±â =");
-		printStatus();
-		
-		goBack();
-		System.out.println("= [µÚ·Î] Å¬¸¯ ");
-		printStatus();
-		
-		goForward();
-		System.out.println("= [¾ÕÀ¸·Î] Å¬¸¯ ");
-		printStatus();
-		
-		goURL("halfDev.com");
-		System.out.println("= new url = ");
-		printStatus();
-	}
-	
-	public static void printStatus() {
-		System.out.println("back: " + back);
-		System.out.println("forward: " + forward);
-		System.out.println("ÇöÀçÈ­¸éÀº '" + back.peek()+"' ÀÔ´Ï´Ù.");
-		System.out.println();
-	}
-	
-	public static void goURL(String url) {
-		back.push(url);
-		if (!forward.empty()) 
-			forward.clear();
-	}
-	
-	public static void goForward() {
-		if (!forward.empty()) 
-			back.push(forward.pop());
-	}
-	
-	public static void goBack() {
-		if (!back.empty()) 
-			forward.push(back.pop());
-	}
+    public static Stack back = new Stack();
+    public static Stack forward = new Stack();
+
+    public static void main(String[] args) {
+        goURL("1.Naver");
+        goURL("2.Daum");
+        goURL("3.Nate");
+        goURL("4.Google");
+
+        printStatus();
+
+        goBack();
+        System.out.println("= ï¿½Ú·Î°ï¿½ï¿½ï¿½ =");
+        printStatus();
+
+        goBack();
+        System.out.println("= [ï¿½Ú·ï¿½] Å¬ï¿½ï¿½ ");
+        printStatus();
+
+        goForward();
+        System.out.println("= [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] Å¬ï¿½ï¿½ ");
+        printStatus();
+
+        goURL("halfDev.com");
+        System.out.println("= new url = ");
+        printStatus();
+    }
+
+    public static void printStatus() {
+        System.out.println("back: " + back);
+        System.out.println("forward: " + forward);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ '" + back.peek() + "' ï¿½Ô´Ï´ï¿½.");
+        System.out.println();
+    }
+
+    public static void goURL(String url) {
+        back.push(url);
+        if (!forward.empty())
+            forward.clear();
+    }
+
+    public static void goForward() {
+        if (!forward.empty())
+            back.push(forward.pop());
+    }
+
+    public static void goBack() {
+        if (!back.empty())
+            forward.push(back.pop());
+    }
 
 }

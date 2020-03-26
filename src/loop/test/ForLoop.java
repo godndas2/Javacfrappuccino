@@ -1,20 +1,20 @@
 package loop.test;
 
 public class ForLoop {
-	
-	public void forLoop(int forloop) { // forloop : main¸Ş¼Òµå¿¡¼­ ³Ö¾îÁÖ´Â ¼ıÀÚ(intÇü)
-		int sum = 0;
-		for (int i = 1; i <= forloop; i++) {
-			System.out.println("sum : " +sum);
-			System.out.println("i : " +i);
-			sum+=i; // sum = sum + 1
-		}
-		System.out.println("1 ~ 10À» ´õÇÏ¸é : " + sum);
-	}
-	
-	public static void main(String[] args) {
-		ForLoop f = new ForLoop();
-		f.forLoop(10); // 10Àº forLoop()ÀÇ  int forloop
-	}
+
+    public void forLoop(int forloop) { // forloop : mainï¿½Ş¼Òµå¿¡ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½(intï¿½ï¿½)
+        int sum = 0;
+        for (int i = 1; i <= forloop; i++) {
+            System.out.println("sum : " + sum);
+            System.out.println("i : " + i);
+            sum += i; // sum = sum + 1
+        }
+        System.out.println("1 ~ 10ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ : " + sum);
+    }
+
+    public static void main(String[] args) {
+        ForLoop f = new ForLoop();
+        f.forLoop(10); // 10ï¿½ï¿½ forLoop()ï¿½ï¿½  int forloop
+    }
 
 }
