@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -30,6 +31,9 @@ public interface ToyRegistrationValidator extends Function<Lego, ValidResultToy>
                     "GREEN",
                     "YELLOW"
     );
+
+    static BiConsumer<Toy, Boolean> divisionSizeAge = (toy, sizeValid) ->
+            System.out.println("Size: " + toy.getSize() + (sizeValid ? toy.getSize() : " CAN NOT USE"));
 }
 
 enum ValidResultToy {

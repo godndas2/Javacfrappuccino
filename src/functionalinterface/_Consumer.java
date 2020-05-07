@@ -1,7 +1,5 @@
 package functionalinterface;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 

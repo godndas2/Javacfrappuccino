@@ -40,5 +40,8 @@ public class Main {
 //                .forEach(System.out::println)
                 .collect(Collectors.joining(" "))
         );
+
+        System.out.println("<<< CONSUMER >>>");
+        divisionSizeAge.accept(toy, false);
     }
 }
