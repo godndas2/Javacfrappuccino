@@ -31,6 +31,10 @@ public class ListToMap {
 
         System.out.println(result);
 
+        // filterByLength()
+        List<String> strFilterByLeng = obj.filterList(language, 3, obj::filterByLength);
+
+        System.out.println(strFilterByLeng);
     }
 
     // Function<T, R> : 객체 T를 객체 R로 매핑
