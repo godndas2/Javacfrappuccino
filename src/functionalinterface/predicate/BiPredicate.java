@@ -12,5 +12,6 @@ public class BiPredicate {
 
         boolean result2 = filter.test("JAVA", 14);
         System.out.println(result2); // false
+
     }
 }
