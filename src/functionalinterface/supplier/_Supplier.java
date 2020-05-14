@@ -8,6 +8,7 @@ import java.util.function.Supplier;
 * @author halfdev
 * @since 2020-05-05
 * Parameter 를 받지 않고 특정 Type 결과를 Return 하는 Interface
+* it takes no arguments and returns a result.
 */
 public class _Supplier {
     public static void main(String[] args) {
