@@ -30,10 +30,34 @@ public class FactorySupplier {
     }
 
 
-    static class Developer {
+    public static class Developer {
         private String name;
         private BigDecimal salary;
         private LocalDate start;
+        private int age;
+
+        public Developer(String name) {
+            this.name = name;
+        }
+
+        public Developer() {
+        }
+
+        public Developer(String name, BigDecimal salary, int age) {
+            this.name = name;
+            this.salary = salary;
+            this.age = age;
+        }
+
+        @Override
+        public String toString() {
+            return "Developer{" +
+                    "name='" + name + '\'' +
+                    ", salary=" + salary +
+                    ", start=" + start +
+                    ", age=" + age +
+                    '}';
+        }
 
         public void setName(String name) {
             this.name = name;
@@ -45,6 +69,10 @@ public class FactorySupplier {
 
         public void setStart(LocalDate start) {
             this.start = start;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
         }
 
         public String getName() {
@@ -59,20 +87,8 @@ public class FactorySupplier {
             return start;
         }
 
-        public Developer() {
-        }
-
-        public Developer(String name) {
-            this.name = name;
-        }
-
-        @Override
-        public String toString() {
-            return "Developer{" +
-                    "name='" + name + '\'' +
-                    ", salary=" + salary +
-                    ", start=" + start +
-                    '}';
+        public int getAge() {
+            return age;
         }
     }
 
