@@ -55,9 +55,14 @@ public class ComparatorListSort {
             System.out.println(listDev);
         }
 
-    }
+        // Sort With Lambda
+        System.out.println("[ Sort With Lambda ]");
+        listDevs.sort((Developer o1, Developer o2) -> o1.getAge() - o2.getAge());
+        listDevs.forEach((developer) -> System.out.println(developer));
+//        listDevs.forEach(System.out::println);
 
-    // TODO Sort With Lambda
+        // TODO More Lambda Examples
+    }
 
     public static List<Developer> getDevelopers() {
         List<Developer> result = new ArrayList<>();
