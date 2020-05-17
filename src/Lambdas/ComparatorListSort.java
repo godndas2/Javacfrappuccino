@@ -61,7 +61,10 @@ public class ComparatorListSort {
         listDevs.forEach((developer) -> System.out.println(developer));
 //        listDevs.forEach(System.out::println);
 
-        // TODO More Lambda Examples
+        // More Lambda Examples
+        System.out.println("[ Sort Name ]");
+        listDevs.sort((o1,o2) -> o1.getName().compareTo(o2.getName()));
+        listDevs.forEach(System.out::println);
     }
 
     public static List<Developer> getDevelopers() {
