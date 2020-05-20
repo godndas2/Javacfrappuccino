@@ -47,11 +47,28 @@ public class StreamMapTest {
 
         // List of objects -> List of other objects
         // convert a list of staff objects into a list of StaffPublic objects
+
+        // Before
         List<StaffPublic> staffList = convertToStaffPublic(staff);
-        System.out.println(staffList);
+        System.out.println(staffList); // [StaffPublic{name='halfdev', age=26, extra='This field is for halfdev Only!'}, StaffPublic{name='gazero', age=28, extra='null'}, StaffPublic{name='tester', age=30, extra='null'}]
+
+        // stream
+        List<StaffPublic> staffList2 = staff.stream().map(temp -> {
+            StaffPublic obj = new StaffPublic();
+            obj.setName(temp.getName());
+            obj.setAge(temp.getAge());
+            if ("halfdev".equals(temp.getName())) {
+                obj.setExtra("This field is for halfdev Only!");
+            }
+            return obj;
+        }).collect(Collectors.toList());
+
+        System.out.println(staffList2); // [StaffPublic{name='halfdev', age=26, extra='This field is for halfdev Only!'}, StaffPublic{name='gazero', age=28, extra='null'}, StaffPublic{name='tester', age=30, extra='null'}]
+
 
     }
 
+    // for Before Version
     private static List<StaffPublic> convertToStaffPublic(List<Staff> staff) {
         List<StaffPublic> result = new ArrayList<>();
         for (Staff staffs : staff) {
