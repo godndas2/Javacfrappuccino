@@ -2,6 +2,7 @@ package stream;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -73,7 +74,14 @@ public class StreamFlatMapTest {
 
         collect.forEach(System.out::println);
 
-        // TODO Stream + Primitive + flatMapToInt
+        // Stream + Primitive + flatMapToInt
+        int [] arrayInt = {1,2,3,4,5,6};
+
+        // Stream<int[]>
+        Stream<int[]> streamArray = Stream.of(arrayInt);
+        // Stream<int[]> -> flatMap -> IntStream
+        IntStream intStream = streamArray.flatMapToInt(x -> Arrays.stream(x));
+        intStream.forEach(x -> System.out.println(x)); // 1,2,3,4,5,6
     }
 
     static class Student {
