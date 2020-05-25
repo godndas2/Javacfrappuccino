@@ -33,6 +33,13 @@ public class StreamFindFirstFindAny {
             System.out.println("No Value");
         }
 
-        // TODO findAny()
+        // findAny() : Find any element from a Stream of Integers.
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        Optional<Integer> any = list.stream().filter(x -> x > 1).findAny();
+        if (any.isPresent()) {
+            Integer integer = any.get();
+            System.out.println(integer); // 2
+        }
     }
 }
