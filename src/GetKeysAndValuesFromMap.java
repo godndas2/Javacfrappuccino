@@ -35,6 +35,11 @@ public class GetKeysAndValuesFromMap {
             System.out.println("Key : " + k + ", Value : " + v);
         });
 
+        // filtering
+        map.entrySet().stream()
+                .filter(x -> "1234".equals(x.getValue()))
+                .forEach(x -> System.out.println("Key : " + x.getKey() + ", Value : " + x.getValue()));
+
 
 
     }
