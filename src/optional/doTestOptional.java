@@ -1,5 +1,6 @@
 package optional;
 
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class doTestOptional {
@@ -20,7 +21,7 @@ public class doTestOptional {
         System.out.println("owner : " + ownerName);
         System.out.println("address : " + address);
 
-
+//        Optional.ofNullable("").filter(house.getOwner()::equals).orElseThrow(NoSuchElementException::new);
     }
 
     static House getRandomeHouse() {
