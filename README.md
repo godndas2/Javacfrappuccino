@@ -61,4 +61,4 @@ ThreadA : 2019.06.09
 여러 개의 Thread가 한 개의 자원을 사용하고자 할 때,  
 현재 Data를 사용하고 있는 해당 Thread를 제외하고 나머지  
 Thread들은 Data에 접근 할 수 없도록 한다.  
-- ThreadSafe.java 의 주석처리 된 synchronized 코드를 확인해보자.
+- ThreadSafe.java 의 주석처리 된 synchronized 코드를 확인해보자. 
