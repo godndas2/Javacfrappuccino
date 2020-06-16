@@ -1,6 +1,7 @@
 package optional;
 
-import java.util.NoSuchElementException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class doTestOptional {
@@ -18,17 +19,27 @@ public class doTestOptional {
                 .map(House::getAddress)
                 .orElse("아직 주소가 발급되지 않았습니다.");
 
-        System.out.println("owner : " + ownerName);
-        System.out.println("address : " + address);
+        System.out.println("owner : " + ownerName); // owner : tester
+        System.out.println("address : " + address); // address : Seoul
 
-//        Optional.ofNullable("").filter(house.getOwner()::equals).orElseThrow(NoSuchElementException::new);
+        Map<String, Object> map = new HashMap<>();
+        map.put("tester", house.getOwner().getName());
+        map.put("Seoul", house.getAddress());
+
+        map.forEach((k, v) -> {
+            System.out.println("map : " + k + " Count : " + v); // map : Seoul Count : Seoul, map : tester Count : tester
+            if ("Seoul".equals(k)) {
+                System.out.println("This is Seoul"); // This is Seoul
+            }
+        });
     }
 
     static House getRandomeHouse() {
         House house = new House();
-//        Person person = new Person();
-//        person.setName("tester");
-//        house.setOwner(person);
+        Person person = new Person();
+        person.setName("tester"); //
+        house.setAddress("Seoul"); //
+        house.setOwner(person); //
         return house;
     }
 
