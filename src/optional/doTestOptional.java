@@ -32,6 +32,20 @@ public class doTestOptional {
                 System.out.println("This is Seoul"); // This is Seoul
             }
         });
+
+        // isPresent(), ifPresent()
+        Optional<Person> owner = Optional.of(house.getOwner());
+        Optional<String> empty = Optional.empty();
+
+        if (owner.isPresent()) {
+            System.out.println("owner : " + owner);
+        } else {
+            System.out.println("EMPTY OWNER");
+        }
+
+        owner.ifPresent(o -> System.out.println("Owner : " + owner));
+        empty.ifPresent(e -> System.out.println("I prefer Empty Owner"));
+
     }
 
     static House getRandomeHouse() {
@@ -61,6 +75,14 @@ public class doTestOptional {
 
         public int getAge() {
             return age;
+        }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
         }
     }
 
