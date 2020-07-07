@@ -1,4 +1,4 @@
-# Why MultiThread?  
+# Why MultiThread?   
 대기시간이 발생했을 때 기다리는 동안 다른 일을 처리하여  
 처리 속도를 높이기 위함  
 (단, CPU Core가 적으면 Thread를 그만큼 만들 수 없다.)
